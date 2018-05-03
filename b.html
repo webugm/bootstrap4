@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      function senddata()
+      {
+        window.opener.document.getElementById('myname').value = document.getElementById('mytext').value;
+        window.opener.document.getElementById('mypic').src = "ch08.bmp";
+        window.close();
+      }
+    </script>
+ 
+    <title>這是子視窗</title>
+  </head>
+  <body>
+    <div class="container my-5">
+      
+      <input type=text name="mytext" id="mytext" value="abc">
+      <input type="button" value="關閉視窗並傳送資料及改變圖檔" onClick="senddata()" />
+    </div>
+    <div class="container">
+      <h2>這是一個父子視窗傳送資料及改變圖檔範例</h2>
+    </div>
+
+    <hr>
+
+ 
+  </body>
+</html>

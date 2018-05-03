@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+ 
+    <title>這是父視窗</title>
+  </head>
+  <body>
+    <div class="container my-5">
+      <input type=text name="myname" id="myname" value="123">
+      <img src='img/ch06.bmp' id="mypic">
+      <span><a href="b.html" onMouseOver="infoWin(this.href,300,300)" >...</a></span>
+    </div>
+    <div class="container">
+      <h2>這是一個父子視窗傳送資料及改變圖檔範例</h2>
+    </div>
+
+    <hr>
+    <script>
+      function infoWin(imgName,imgH,imgW)
+      {
+      mywin=window.open("","","left=300,top=300,width=" + imgW + ",height=" + imgH);
+      mywin.location.href = imgName;
+      }
+    </script>
+
+ 
+  </body>
+</html>
