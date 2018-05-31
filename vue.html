@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@2.3.4"></script>
+
+ 
+    <title>Bootstrap VUE</title>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+      <div v-html=var1></div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data:{
+          message: '這是一個段落',
+          var: '<span>這是一個段落2</span>'
+        }
+      });
+    </script>
+ 
+  </body>
+</html>
